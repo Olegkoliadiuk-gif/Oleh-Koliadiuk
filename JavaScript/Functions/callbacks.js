@@ -32,7 +32,7 @@ const logToConsole = (status) => {
     console.log(`Log: Message status is ${status}`);
 };
 
-// Викликаємо:
+
 sendNotification("Match found!", logToConsole)
 
 
