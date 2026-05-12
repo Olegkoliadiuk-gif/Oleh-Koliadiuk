@@ -18,18 +18,22 @@ body {
     align-items: center;
     border: 1px solid #cfd447;
     gap: 5px;
-    box-shadow: 0 0 15px rgba(207, 212, 71, 0.5), 0 0 5px rgba(207, 212, 71, 0.3);
+    /* Світіння бордера */
+    box-shadow: 0 0 15px rgba(207, 212, 71, 0.4);
+    /* Колір тексту всередині рамки */
+    color: #cfd447; 
 }
 
 .title {
     color: #cfd447;
-    margin: 0;
+    text-shadow: 0 0 8px rgba(207, 212, 71, 0.5);
 }
 
 a {
     color: #cfd447;
     text-decoration: none;
 }
+
 
 a:hover {
     text-decoration: underline;
