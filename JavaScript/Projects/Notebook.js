@@ -348,3 +348,6 @@ name = String(name);
 alert(typeof name) // "10";
 //
 
+let variable = 0
+let number = 3
+(variable > number) ? true : false
