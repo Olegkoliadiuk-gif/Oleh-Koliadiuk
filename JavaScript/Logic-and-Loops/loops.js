@@ -12,3 +12,11 @@ const gameInventory = ["Aghanim's Shard", "Blink Dagger", "Black King Bar"];
 for (const item of gameInventory) {
     console.log(`Inventory Check: ${item} is ready.`);
 }
+
+// Loop While
+let i = 0;
+while (i > 3) {
+    alert(i);
+    i++;
+}
+//

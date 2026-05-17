@@ -304,7 +304,7 @@ if (i > 5) {
 //
 
 //
-outer: 
+outer
     for (let i = 0; i < 3; i++) {
 
         for (let j = 0; j < 3; j++) {
@@ -322,3 +322,29 @@ alert('Succes');
 label: {
     break label;
 }
+//
+
+//
+let value = true;
+alert(typeof value); // boolean (true);
+
+value = String(value); // true - "true", null = "null", false - "false"...
+alert(typeof value); // string 
+//
+
+//
+let value = 5;
+alert(typeof value);
+
+value = String(value)
+alert(typeof value); // "5";'
+//
+
+//
+let name = 10;
+alert(typeof name);
+
+name = String(name);
+alert(typeof name) // "10";
+//
+
