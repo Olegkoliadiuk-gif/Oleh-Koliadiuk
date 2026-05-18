@@ -2,7 +2,7 @@
 function calculateEfficiency(score, hoursPlayed) {
     // Rounding to 2 decimal places
     const efficiency = (score / hoursPlayed).toFixed(2);
-    return `efficiency: ${efficiency} points per hour`;
+    return console.log(`efficiency: ${efficiency} points per hour`);
 }
 
 // Arrow function to check age for local lyceum status

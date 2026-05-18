@@ -44,7 +44,7 @@ if (userName === "Oleg") {
 
 
 
-// my favorite singer Onda Andar (Best track for listening: Onda Andar - prop hunts)
+// my favorite singer Onda Andar (Best track for listening: Onda Andar - prop hunt)
 let year = prompt("What year now?", "2026")
 
 if (year === 2026) {
@@ -396,3 +396,116 @@ switch(MyName) {
 
 }
 //
+
+//
+function showMessage(){
+    alert("Hello, world!");
+}
+//
+
+//
+function showMessage(from = "Hello, ", text = "world!") {
+    alert(from + ":" + text);
+}
+
+showMessage("Hi")
+//
+
+//
+function Showmessage(text) {
+    if (text === undefined) {
+        alert("Empty message");
+    }
+}
+//
+
+// 
+function showmessage(text) {
+    text = text || alert("Empty message")
+}
+//
+
+//
+function showCount(count) {
+    alert(count ?? "Unknown")
+}
+
+showCount(0) // 0
+showCount(null) // "Unknown"
+showCount() // "Unknown"
+//
+
+//
+function sum(a, b) {
+    return a + b
+}
+
+let result = sum(1, 2);
+alert(result) // 3
+//
+
+//
+function checkAge() {
+    if (age > 18) {
+        return true;
+    } else {
+        return confirm("Do you have your parents permission?")
+    }
+}
+
+let age = prompt("How old are you?", "18");
+
+if (checkAge(age)) {
+    alert("Succesful")
+} else {
+    alert("Error");
+}
+//
+
+//
+function showMovie(age) {
+    if (!checkAge(age)) {
+        return;
+    }
+
+    alert("Show film!");
+}
+//
+
+//
+function doNothing() {}
+
+alert(doNothing() === undefined); // true
+//
+
+//
+function min(a, b) {
+    if (a < b)
+        return a
+    if (a > b) {
+        return b
+    }
+}
+//
+
+//
+function pow(x, n) {
+    let result = x;
+
+    for (let i = 1; i < n; i++) {
+        result *= x;
+    }
+
+    return result;
+}
+
+let x = prompt("x?", '');
+let n = prompt("n?", '');
+
+if (n < 1) {
+    alert(`We dont support ${n}, use normal number.`);
+} else {
+    alert(pow(x, n));
+}
+//
+
