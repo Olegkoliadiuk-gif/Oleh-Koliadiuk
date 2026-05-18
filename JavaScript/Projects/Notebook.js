@@ -348,6 +348,51 @@ name = String(name);
 alert(typeof name) // "10";
 //
 
+// Syntax
 let variable = 0
 let number = 3
 (variable > number) ? true : false
+//
+
+//
+let a = 3;
+
+switch(a) {
+    case 3:
+        alert("True");
+        break;
+
+    case 2:
+        alert("Not enough");
+        break;
+
+    case 4: 
+        alert("Too much");
+        break;
+
+    default:
+        alert("Unknown value")
+}
+//
+
+//
+const MyName = "Oleg"
+
+switch(MyName) {
+    case "Oleg": {
+        let OlegAge = prompt("Age", "##")
+
+        if (age === "29") {
+            alert("Succesful")
+        } else {
+            alert("Error")
+            window.location.href="https://www.google.com"
+        }
+    }
+
+    default:
+        alert("Error")
+        window.location.href="https://www.google.com"
+
+}
+//
