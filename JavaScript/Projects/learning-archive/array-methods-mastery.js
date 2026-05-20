@@ -1,8 +1,3 @@
-/**
- * SECTION: JAVASCRIPT ARRAY METHODS
- * Practice: Cleaning data, filtering strings, and math
- */
-
 // Data Cleaning
 const players = [" shadow fiend ", " meepo ", " abaddon"];
 const CleanPlayers = players.map(name => name.trim().toUpperCase());

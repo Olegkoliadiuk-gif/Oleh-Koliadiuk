@@ -1,6 +1,7 @@
+// 1. Basic switch-case structure example
 let a = 2 + 2;
 
-switch(a) {
+switch (a) {
     case 3:
         alert("Not enough");
         break;
@@ -14,6 +15,7 @@ switch(a) {
         alert("I don't know such values");
 }
 
+// 2. Grouping of cases (case 3 and case 5 execute the same block)
 let b = 3;
 
 switch (b) {
@@ -25,12 +27,13 @@ switch (b) {
         alert("Maybe you need to take math classes?");
         break;
     default:
-        alert("It Looks strange");
+        alert("It looks strange");
 }
 
+// 3. Handling string values from prompt (strict comparison proof)
 let arg = prompt("Enter Number", "#####");
 
-switch(arg) {
+switch (arg) {
     case "0":
     case "1":
         alert("Zero or One");
@@ -45,43 +48,41 @@ switch(arg) {
         alert("Unknown value");
 }
 
+// 4. Browser checking via switch statement
 const browser = "Safari";
 
 switch (browser) {
-    case 'Edge':
+    case "Edge":
         alert("You've got the Edge!");
         break;
-    case 'Chrome':
-    case 'Firefox':
-    case 'Safari':
-    case 'Opera':
-        alert('We support these browsers too');
+    case "Chrome":
+    case "Firefox":
+    case "Safari":
+    case "Opera":
+        alert("We support these browsers too");
         break;
     default:
-        alert('We hope this page looks good!');
+        alert("We hope this page looks good!");
 }
 
+// 5. The same browser checking logic, rewritten using if-else
 if (browser === "Edge") {
     alert("You've got the Edge!");
-} else if (browser === "Chrome" || browser === "Firefox" || browser === "Safari" || browser === "Opera") {
+} else if (
+    browser === "Chrome" || 
+    browser === "Firefox" || 
+    browser === "Safari" || 
+    browser === "Opera"
+) {
     alert("We support these browsers too");
 } else {
-    alert("We hope this page looks good");
+    alert("We hope this page looks good!");
 }
 
-let num = +prompt('a', '');
+// 6. Refactoring continuous if statements into a switch block (using unary plus for type conversion)
+let num = +prompt("a", "");
 
-if (num == 0) {
-    alert(0);
-}
-if (num == 1) {
-    alert(1);
-}
-if (num == 2 || num == 3) {
-    alert('2,3');
-}
-
-switch(num) {
+switch (num) {
     case 0:
         alert(0);
         break;
@@ -90,6 +91,6 @@ switch(num) {
         break;
     case 2:
     case 3:
-        alert('2,3');
+        alert("2,3");
         break;
 }
