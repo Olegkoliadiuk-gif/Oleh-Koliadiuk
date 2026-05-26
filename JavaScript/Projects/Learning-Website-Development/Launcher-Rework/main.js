@@ -49,10 +49,36 @@ const launcher = {
         return true;
     },
 
-    fire() {
+    fire(event) {
         if (this.rockets > 0) {
             this.rockets -= 1;
             localStorage.setItem('launcher_rockets', this.rockets);
+
+            const rocket = document.createElement('span');
+            rocket.classList.add('flying-rocket');
+            rocket.innerText = '\u{1F680}';
+
+            const clickX = event.clientX;
+            const clickY = event.clientY;
+
+            rocket.style.left = `${clickX}px`;
+            rocket.style.top = `${clickY}px`;
+
+            const randomX = (Math.random() - 0.5) * 160;
+            const randomY = -400 - (Math.random() * 150);
+            const randomRotate = (Math.random() - 0.5) * 45;
+
+            // Передаємо змінні в CSS
+            rocket.style.setProperty('--x', `${randomX}px`);
+            rocket.style.setProperty('--y', `${randomY}px`);
+            rocket.style.setProperty('--r', `${randomRotate}deg`);
+
+            document.body.appendChild(rocket);
+
+            setTimeout(() => {
+                rocket.remove();
+            }, 1200);
+
             alert(`Remaining ${this.rockets}`);
         } else {
             alert("No shells!");
@@ -100,9 +126,9 @@ window.addEventListener('DOMContentLoaded', () => {
         return isInitialized;
     }
 
-    fireBtn.addEventListener('click', () => {
+    fireBtn.addEventListener('click', (e) => {
         if (checkInit()) {
-            launcher.fire();
+            launcher.fire(e);
         }
     });
 
