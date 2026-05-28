@@ -13,7 +13,7 @@
     </header>
 
     <nav>
-        <a href="profile.html" id="Profile">Profile</a>
+        <a href="index.html" id="Profile">Profile</a>
         <a href="stats.html" id="Stats">Statistics</a>
         <a href="settings.html" id="Settings">Settings</a>
     </nav>
@@ -22,9 +22,9 @@
         <div class="card">
             <h2>STATISTICS</h2>
             <div class="avatar" style="background-color: #ff4e00; border-radius: 8px; height: 10px; width: 100%; margin: 20px 0;"></div>
-            <p class="status">Winrate: 56%</p>
-            <p class="status">Matches: 1,200+</p>
-            <p class="status">Main Role: Mid</p>
+            <p class="status">Winrate: <span id="stat-winrate">56%</span></p>
+            <p class="status">Matches: <span id="stat-matches">1,200+</span></p>
+            <p class="status">Main Role: <span id="stat-role">Mid</span></p>
             <button id="reset_stats_btn">Reset Stats</button>
         </div>
     </section>
