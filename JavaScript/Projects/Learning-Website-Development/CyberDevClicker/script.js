@@ -10,6 +10,8 @@ const player = {
   isST: false,
   isCTO: false,
   isVPOF: false,
+  isInvestor: false,
+  isAIOverlord: false,
 
   click() {
     this.score += this.clickPower;
@@ -17,10 +19,12 @@ const player = {
     this.save();
   },
 
-  buyAI() {
+buyAI() {
     if (this.score >= this.aiCost) {
       this.score -= this.aiCost;
-      this.passiveIncome += 1;
+      const incomeBoost = Math.max(1, Math.round(this.aiCost * 0.02));
+      this.passiveIncome += incomeBoost;
+      
       this.aiCost = Math.round(this.aiCost * 1.5);
       this.updateUI();
       this.save();
@@ -41,6 +45,8 @@ const player = {
       isST: this.isST,
       isCTO: this.isCTO,
       isVPOF: this.isVPOF,
+      isInvestor: this.isInvestor,
+      isAIOverlord: this.isAIOverlord,
     };
     localStorage.setItem("cyberDevSave", JSON.stringify(dataToSave));
   },
@@ -60,6 +66,8 @@ const player = {
       this.isST = parsedData.isST;
       this.isCTO = parsedData.isCTO;
       this.isVPOF = parsedData.isVPOF;
+      this.isInvestor = parsedData.isInvestor;
+      this.isAIOverlord = parsedData.isAIOverlord;
     }
   },
 
@@ -69,7 +77,23 @@ const player = {
 
     let currentRank = "Junior Developer";
 
-    if (this.score >= 30000 || this.isVPOF) {
+    if (this.score >= 500000 || this.isAIOverlord) {
+      if (!this.isAIOverlord) {
+        alert("CONGRATULATIONS! You achieved the ultimate title: AI Overlord!");
+        this.isAIOverlord = true;
+        this.passiveIncome += 1000;
+        this.clickPower = 256;
+      }
+      currentRank = "AI Overlord";
+    } else if (this.score >= 100000 || this.isInvestor) {
+      if (!this.isInvestor) {
+        alert("Congratulations! You are a Silicon Valley Investor now!");
+        this.isInvestor = true;
+        this.passiveIncome += 500;
+        this.clickPower = 128;
+      }
+      currentRank = "Silicon Valley Investor";
+    } else if (this.score >= 30000 || this.isVPOF) {
       if (!this.isVPOF) {
         alert("Congratulations! You are VP of Engineering now!");
         this.isVPOF = true;
@@ -143,7 +167,7 @@ hireAiBtn.addEventListener("click", () => {
 
 info.addEventListener("click", () => {
   alert(
-    "GAMEPLAY & CAREER PROGRESSION\n\n• Middle Developer (200 LoC)\n  +10 Passive Income / +2 Click Power\n\n• Senior Developer (500 LoC)\n  +15 Passive Income / +4 Click Power\n\n• Team Lead (1,500 LoC)\n  +25 Passive Income / +8 Click Power\n\n• Software Architect (5,000 LoC)\n  +50 Passive Income / +16 Click Power\n\n• Chief Technology Officer (15,000 LoC)\n  +100 Passive Income / +32 Click Power\n\n• VP of Engineering (30,000 LoC)\n  +200 Passive Income / +64 Click Power",
+    "GAMEPLAY & CAREER PROGRESSION\n\n• Middle Developer (200 LoC)\n  +10 Passive Income / +2 Click Power\n\n• Senior Developer (500 LoC)\n  +15 Passive Income / +4 Click Power\n\n• Team Lead (1,500 LoC)\n  +25 Passive Income / +8 Click Power\n\n• Software Architect (5,000 LoC)\n  +50 Passive Income / +16 Click Power\n\n• Chief Technology Officer (15,000 LoC)\n  +100 Passive Income / +32 Click Power\n\n• VP of Engineering (30,000 LoC)\n  +200 Passive Income / +64 Click Power\n\n• Silicon Valley Investor (100,000 LoC)\n  +500 Passive Income / +128 Click Power\n\n• AI Overlord (500,000 LoC)\n  +1,000 Passive Income / +256 Click Power",
   );
 });
 
