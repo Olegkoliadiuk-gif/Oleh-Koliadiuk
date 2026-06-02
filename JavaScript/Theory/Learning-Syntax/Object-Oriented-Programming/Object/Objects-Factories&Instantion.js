@@ -1,6 +1,6 @@
 // Functions & Factories
 function makeUser(name, age) {
-    return { name, age };
+  return { name, age };
 }
 
 const createdUser = makeUser("Oleg", 14);
