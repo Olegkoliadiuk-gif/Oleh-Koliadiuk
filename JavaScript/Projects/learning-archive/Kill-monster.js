@@ -1,18 +1,18 @@
 const hero = {
-    xp: 0,
-    
-    killMonster() {
-        this.xp += 10;
-        return this; 
-    },
+  xp: 0,
 
-    completeQuest() {
-        this.xp += 50;
-        return this;
-    },
+  killMonster() {
+    this.xp += 10;
+    return this;
+  },
 
-    showStats() {
-        console.log(`Xp: ${this.xp}`);
-        return this;
-    }
-}
+  completeQuest() {
+    this.xp += 50;
+    return this;
+  },
+
+  showStats() {
+    console.log(`Xp: ${this.xp}`);
+    return this;
+  },
+};

@@ -1,12 +1,12 @@
 // Object.assign Loops & Extensions
 let initialUser = {
-    name: "Alex",
-    age: 30,
+  name: "Alex",
+  age: 30,
 };
 
 let standardClone = {};
 for (let key in initialUser) {
-    standardClone[key] = initialUser[key];
+  standardClone[key] = initialUser[key];
 }
 standardClone.name = "Masha";
 alert(initialUser.name); // Alex
@@ -25,8 +25,8 @@ Object.assign(rewriteUser, { name: "Petro" });
 alert(rewriteUser.name); // now user = { name: "Petro"}
 
 let assignCloneUser = {
-    name: "Alex",
-    age: 30
+  name: "Alex",
+  age: 30,
 };
 let assignedClone = Object.assign({}, assignCloneUser);
 alert(assignedClone.name); // Alex
@@ -35,12 +35,12 @@ assignCloneUser.city = "Kyiv";
 
 // Deep Cloning
 let nestedUser = {
-    name: "Oleg",
-    age: 22,
-    sizes: {
-        height: 182,
-        width: 50
-    }
+  name: "Oleg",
+  age: 22,
+  sizes: {
+    height: 182,
+    width: 50,
+  },
 };
 
 let shallowClone = Object.assign({}, nestedUser);

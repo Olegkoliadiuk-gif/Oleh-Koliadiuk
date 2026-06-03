@@ -6,12 +6,12 @@ let baseUser = { name: "Oleg" };
 let realClone = { ...baseUser };
 realClone.name = "Bro";
 
-console.log(baseUser.name);  // Output: "Oleg"
+console.log(baseUser.name); // Output: "Oleg"
 console.log(realClone.name); // Output: "Bro"
 
 // Notation & Utilities
 const dynamicObj = {};
-const dynamicKey = "DynamicKey"; 
+const dynamicKey = "DynamicKey";
 dynamicObj[dynamicKey] = "admin";
 
 const target = { a: 1 };

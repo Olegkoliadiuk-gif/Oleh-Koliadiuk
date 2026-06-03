@@ -2,7 +2,7 @@
 let IsReady = confirm("Are you ready to learn JavaScript?");
 
 if (IsReady) {
-    alert("Good! Let's go.");
+  alert("Good! Let's go.");
 } else {
-    alert("Okay, relax and come back later!");
+  alert("Okay, relax and come back later!");
 }

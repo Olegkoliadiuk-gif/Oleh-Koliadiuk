@@ -1,4 +1,4 @@
-alert("6" / "2") // 3
+alert("6" / "2"); // 3
 
 let str = "123";
 alert(typeof str); // String
@@ -16,5 +16,3 @@ alert(Number("  123   ")); // 123
 alert(Number("123z")); // NaN
 alert(Number(true)); // 1
 alert(Number(false)); // 0
-
-

@@ -19,12 +19,12 @@ const player = {
     this.save();
   },
 
-buyAI() {
+  buyAI() {
     if (this.score >= this.aiCost) {
       this.score -= this.aiCost;
       const incomeBoost = Math.max(1, Math.round(this.aiCost * 0.02));
       this.passiveIncome += incomeBoost;
-      
+
       this.aiCost = Math.round(this.aiCost * 1.5);
       this.updateUI();
       this.save();
