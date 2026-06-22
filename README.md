@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./core-assets/banner.gif" alt="Profile Banner" width="100%">
+  <img src="./core-assets/banner-gemini.png" alt="Profile Banner" width="100%">
 </p>
 
 ---
